@@ -7,6 +7,11 @@ body {
     font-family: Tahoma, Arial;
 }
 
+/* increase font size for all p elements */
+p {
+    font-size: 1.6em;
+}
+
 nav {
     width: 100%;
     background-color: #4d5791;
@@ -69,9 +74,12 @@ main {
 }
 
 .page-area {
-    max-width: 768px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
 }
+
 
 footer {
     height: 50px;
@@ -98,8 +106,21 @@ main article {
     display: inline-block;
     width: 100%;
     max-width: 340px;
-    text-align: justify;
     margin: 20px;
+    text-align: left;
+}
+.free article {
+    padding: 20px;
+    /* make font bigger */
+    font-size: 1rem;
+    width: 50%;
+    max-width: fit-content;
+}
+
+.free h1 {
+    /* make font bigger */
+    font-size: 3rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
