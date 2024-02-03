@@ -17,3 +17,4 @@
 - Added server, Axios, and ChartJS
 - Upgraded Node to be able to import JSON files in server.
 - Implemented ChartJS pie chart display
+- Added D3JS Chart
