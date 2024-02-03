@@ -124,12 +124,14 @@ main article {
     text-align: center;
 }
 
-.chart {
-    display: flex;
+.charts {
+    display: grid;
     justify-content: center;
-    width: 100%;
+    padding: 1rem;
+}
+
+.chart1 {
     height: 700px;
-    padding: 2rem;
 }
 @media screen and (min-width: 768px) {
     main article {
