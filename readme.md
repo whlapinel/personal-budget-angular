@@ -12,3 +12,8 @@
 - removed duplicate paragraphs
 - added aria-label to background image
 - reduced awkward spacing between words by changing text-align: justify to text-align: left
+
+## Coding Exercise 1 Notes
+- Added server, Axios, and ChartJS
+- Upgraded Node to be able to import JSON files in server.
+- Implemented ChartJS pie chart display
