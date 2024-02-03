@@ -124,6 +124,13 @@ main article {
     text-align: center;
 }
 
+.chart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    padding: 2rem;
+}
 @media screen and (min-width: 768px) {
     main article {
         margin: 10px;

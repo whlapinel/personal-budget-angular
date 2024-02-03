@@ -56,6 +56,43 @@
             </article>
         </div>
     </main>
+    <div class="chart">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        async function getData() {
+            const response = await axios.get('http://localhost:3000/budget');
+            console.log(response.data);
+            return response.data;
+        }
+
+        async function renderChart() {
+            const data = await getData();
+            const labels = data.map(item => item.title);
+            const values = data.map(item => item.budget);
+            console.log(labels, values);
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'budget',
+                        data: values,
+                        borderWidth: 1
+                    }]
+                },
+            });
+        }
+
+        renderChart();
+
+    </script>
+
+
     <footer class="bottom">
         <div class="center">
             All rights reserved &copy; Will Lapinel
