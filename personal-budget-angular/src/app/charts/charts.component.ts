@@ -4,14 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 import { DataService } from '../data.service';
-import { D3DonutChartComponent } from '../d3-donut-chart/d3-donut-chart.component';
-import d3 from 'd3';
 
 
 @Component({
   selector: 'pb-charts',
   standalone: true,
-  imports: [D3DonutChartComponent],
+  imports: [],
   templateUrl: './charts.component.html',
   styleUrl: './charts.component.css'
 })
@@ -38,7 +36,7 @@ export class ChartsComponent {
     const budget: any = [];
     const labels: any = [];
 
-    data.map((item: any) => {
+    data?.map((item: any) => {
       budget.push(item.budget);
       labels.push(item.title);
     })
