@@ -16,12 +16,11 @@ export class DataService {
     let data; 
     this.http.get('http://localhost:3000/budget')
     .subscribe((res: any) => {      
-      console.log(res);
       data = res;
-      console.log(data);
+      console.log('dataservice logging data:', data);
+      
     });
     return data;
-    
   }
 
 

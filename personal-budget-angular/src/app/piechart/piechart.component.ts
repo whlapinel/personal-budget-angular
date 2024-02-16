@@ -1,24 +1,22 @@
 import { Component } from '@angular/core';
 import Chart from 'chart.js/auto';
-import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 import { DataService } from '../data.service';
 
 
 @Component({
-  selector: 'pb-charts',
+  selector: 'pb-piechart',
   standalone: true,
   imports: [],
-  templateUrl: './charts.component.html',
-  styleUrl: './charts.component.css'
+  templateUrl: './piechart.component.html',
+  styleUrl: './piechart.component.css'
 })
-export class ChartsComponent {
+export class PiechartComponent {
 
   constructor(
     @Inject(DOCUMENT)
     private document: Document,
-    private http: HttpClient,
     private dataService: DataService) {
   }
 
@@ -32,7 +30,7 @@ export class ChartsComponent {
 
   async ngOnInit() {
     const data = await this.dataService.data as any;
-    console.log('data:', data);
+    console.log('piechart logging data:', data);
     const budget: any = [];
     const labels: any = [];
 
@@ -40,6 +38,9 @@ export class ChartsComponent {
       budget.push(item.budget);
       labels.push(item.title);
     })
+
+    console.log('budget:', budget);
+    
 
     console.log('ngOnInit');
     const ctx = this.getChart() as HTMLCanvasElement;

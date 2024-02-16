@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Eat Out",
+        "budget": 100,
+        "color": "#FF6384"
+    },
+    {
+        "title": "Rent",
+        "budget": 1000,
+        "color": "#36A2EB"
+    },
+    {
+        "title": "Groceries",
+        "budget": 1000,
+        "color": "#FFCE56"
+    },
+    {
+        "title": "Utilities",
+        "budget": 150,
+        "color": "#FF6384"
+    },
+    {
+        "title": "Entertainment",
+        "budget": 100,
+        "color": "#36A2EB"
+    },
+    {
+        "title": "Transportation",
+        "budget": 50,
+        "color": "#FFCE56"
+    },
+    {
+        "title": "Health",
+        "budget": 700,
+        "color": "#FF6384"
+    },
+    {
+        "title": "Clothing",
+        "budget": 50,
+        "color": "#36A2EB"
+    },
+    {
+        "title": "Miscellaneous",
+        "budget": 50,
+        "color": "#FFCE56"
+    }
+]
